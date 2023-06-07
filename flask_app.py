@@ -5,7 +5,6 @@ from nltk.stem import PorterStemmer
 
 app = Flask(__name__)
 
-
 dataset1 = {
     1: 'This is document 1',
     2: 'Another document here',
@@ -28,7 +27,20 @@ dataset2 = {
     16:"yet SVDLM",
     17:"yet played",
     18:"i love swimming",
-    19:"ahmad hello my name is ahmad ahmad",
+    100:"ahmad hello my name is ahmad ahmad",
+    200:"ahmad hello my name is ahmad ahmad",
+    114:"ahmad hello my name is ahmad ahmad",
+    233:"ahmad hello my name is ahmad ahmad",
+    242:"ahmad hello my name is ahmad ahmad",
+    1129:"ahmad hello my name is ahmad ahmad",
+    139:"ahmad hello my name is ahmad ahmad",
+    149:"ahmad hello my name is ahmad ahmad",
+    1669:"ahmad hello my name is ahmad ahmad",
+    17759:"ahmad hello my name is ahmad ahmad",
+    15569:"ahmad hello my name is ahmad ahmad",
+    1789:"ahmad hello my name is ahmad ahmad",
+    1999:"ahmad hello my name is ahmad ahmad",
+    179:"ahmad hello my name is ahmad ahmad",
     20:"yet",
     21:"Flutter is Strong Technology in mobile app devlopment",
     22:"yet",
@@ -95,8 +107,11 @@ def home():
 # صفحة استرجاع النتائج
 @app.route('/search', methods=['POST'])
 def search_page():
+    print('query')
     query = request.form['query']
+
     selected_dataset = request.form['dataset']
+
     matching_documents = search(query, selected_dataset)
     documents = []
     dataset = dataset1 if selected_dataset == 'dataset1' else dataset2
@@ -106,7 +121,8 @@ def search_page():
             document = dataset[doc_id]
             highlighted_document = highlight_word(document, query)
             documents.append(highlighted_document)
-    return render_template('results.html', query, documents)
+    # return render_template('results.html', query=query, documents= documents)
+    return render_template('results.html')
 
 if __name__ == '__main__':
     app.run()
