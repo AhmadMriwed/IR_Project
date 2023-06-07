@@ -10,10 +10,11 @@ from service import store_file
 from service import remove_duplicated
 
 # read data set
-#corpus = docs.read_dataset()
+corpus = docs.read_dataset()
 
-configoration.change_language(configoration.language_code_ar)
-corpus = doc.convert_data_to_corpous(doc.data_ar)
+#configoration.change_language(configoration.language_code_ar)
+#corpus = doc.convert_data_to_corpous(doc.data_ar)
+#corpus = doc.convert_data_to_corpous(doc.data)
 #print(corpus)
 print("count docs : " +f"{len(corpus)}")
 print(store_file.convert_map_to_text_limit(corpus,10))

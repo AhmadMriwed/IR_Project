@@ -102,12 +102,13 @@ def calculate_reciprocal_rank(actual, predicted):
 # Mean Reciprocal Rank
 def calculate_mean_reciprocal_rank(results_docs, relevants_documents):
     reciprocal_ranks = []
-    reciprocal_ranks_count= len(reciprocal_ranks)
-    if(reciprocal_ranks_count==0):
-        return 0
+
     for i in range(len(relevants_documents)):
         reciprocal_rank_value = calculate_reciprocal_rank(relevants_documents[i], results_docs[i])
         reciprocal_ranks.append(reciprocal_rank_value)
+    reciprocal_ranks_count= len(reciprocal_ranks)
+    if(reciprocal_ranks_count==0):
+        return 0
     mean_reciprocal_rank = sum(reciprocal_ranks) / len(reciprocal_ranks)
     return mean_reciprocal_rank
 

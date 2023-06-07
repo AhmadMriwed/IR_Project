@@ -58,6 +58,7 @@ def get_mean_reciprocal_rank(result_queries,qrels):
         if(key in qrels.keys()):
             results_queries.append(result_queries[key])
             relevants_documents.append([item['doc_id'] for item in qrels[key]])
+
     mean_reciprocal_rank=ev.calculate_mean_reciprocal_rank(results_queries,relevants_documents)
     return  mean_reciprocal_rank
 

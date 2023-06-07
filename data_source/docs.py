@@ -24,7 +24,7 @@ def read_dataset():
         corpus[doc.doc_id]=doc.text
         #fetch limit from dataset
         #if(int(doc.doc_id)>110000):
-        if(int(doc.doc_id)>60000):
+        if(int(doc.doc_id)>70000):
         #if(int(doc.doc_id)>60):
             break
     for query in dataset.queries_iter():
