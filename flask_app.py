@@ -96,16 +96,17 @@ def home():
 @app.route('/search', methods=['POST'])
 def search_page():
     query = request.form['query']
-    selected_dataset = request.form['selected_dataset']
+    selected_dataset = request.form['dataset']
     matching_documents = search(query, selected_dataset)
     documents = []
     dataset = dataset1 if selected_dataset == 'dataset1' else dataset2
+
     for doc_id in matching_documents:
         if doc_id in dataset:
             document = dataset[doc_id]
             highlighted_document = highlight_word(document, query)
             documents.append(highlighted_document)
-
+    return render_template('results.html', query, documents)
 
 if __name__ == '__main__':
     app.run()
