@@ -9,13 +9,13 @@ from cluster import cluster_app as ca
 from cluster import search_cluster as sc
 
 
-corpus = docs.read_dataset()
+#corpus = docs.read_dataset()
 #corpus_ar = docs.read_dataset()
 #configoration.change_language(configoration.language_code_ar)
-configoration.cluster_exc=True
+#configoration.cluster_exc=True
 
 corpus_ar = doc.convert_data_to_corpous(doc.data_ar)
-#corpus = doc.convert_data_to_corpous(doc.data)
+corpus = doc.convert_data_to_corpous(doc.data)
 print("count docs : " +f"{len(corpus)}")
 print(store_file.convert_map_to_text_limit(corpus,10))
 

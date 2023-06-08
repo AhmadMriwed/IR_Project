@@ -25,12 +25,12 @@ def  run():
     timer.st()
     model.offline(model.corpus,configoration.language_code_en)
     timer.ed()
-    #fp.run()
+    fp.run()
     #model.online()
-    timer.st()
-    evaluation()
-    timer.ed()
-    #evaluation()
+    # timer.st()
+    # evaluation()
+    # timer.ed()
+
 
 
 
