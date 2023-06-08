@@ -47,7 +47,7 @@ def search_page():
     conf.change_language(selected_dataset)
     documents = search(query, conf.get_by_language(corpus,corpus_ar))
     print(documents)
-    #return render_template('results.html',)
+
     return render_template('results.html',documents=documents,selected_dataset=selected_dataset)
 
 def run():
