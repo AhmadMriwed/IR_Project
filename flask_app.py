@@ -1,8 +1,6 @@
 from flask import Flask, render_template, request
-
 from data_source.model import  corpus
 from data_source.model import  corpus_ar
-from data_source.model import  online
 import configoration.configoration as conf
 
 app = Flask(__name__)
