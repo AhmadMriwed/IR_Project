@@ -10,14 +10,14 @@ from service import store_file
 from service import remove_duplicated
 
 # read data set
-corpus = docs.read_dataset()
+#corpus = docs.read_dataset()
 
 #configoration.change_language(configoration.language_code_ar)
 #corpus = doc.convert_data_to_corpous(doc.data_ar)
 #corpus = doc.convert_data_to_corpous(doc.data)
 #print(corpus)
-print("count docs : " +f"{len(corpus)}")
-print(store_file.convert_map_to_text_limit(corpus,10))
+#print("count docs : " +f"{len(corpus)}")
+#print(store_file.convert_map_to_text_limit(corpus,10))
 #store_file.creat_file_from_map(store_file.path_tokenize,corpus)
 
 # clean data set
@@ -61,7 +61,7 @@ def clean_dataset(corpus):
     return stopwords_corpus
 
 # data preprocessing
-def data_preprocessing():
+def data_preprocessing(corpus):
     return clean_dataset(corpus)
 
 

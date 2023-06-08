@@ -1,5 +1,6 @@
 from configoration import configoration
 
+
 data = [
     {"_id": "1", "title": "", "text": "What is the step by step guide to invest in share market in india?", "metadata": {}},
     {"_id": "22222222222", "title": "", "text": "What is the step by step guide to invest in share market?", "metadata": {}},
@@ -47,6 +48,20 @@ data = [
 #{"_id": "106", "title": "", "text": "Aerodynamically what happens when propellor rotates?", "metadata": {}}
 #id": "146", "title": "", "text": "How can I learn to speak English fluently?", "metadata": {}}
 ]
+
+data = [
+    {"_id": "1", "title": "", "text": "What is the step by step guide to invest in share market in india?"},
+    {"_id": "2", "title": "", "text":"What is the step by step guide to invest in share market?"},
+    {"_id": "3", "title": "", "text": "What is the story of Kohinoor (Koh-i-Noor) Diamond?"},
+    {"_id": "4", "title": "", "text": "What would happen if the Indian government stole the Kohinoor (Koh-i-Noor) diamond back?"},
+    {"_id": "5", "title": "", "text": "How can I increase the speed of my internet connection while using a VPN?"},
+    {"_id": "6", "title": "", "text": "How can Internet speed be increased by hacking through DNS?"},
+    {"_id": "7", "title": "", "text": "Why am I mentally very lonely? How can I solve it?"},
+    {"_id": "8", "title": "", "text": "Find the remainder when [math]23^{24}[/math] is divided by 24,23?"},
+    {"_id": "9", "title": "", "text": "Which one dissolve in water quikly sugar, salt, methane and carbon di oxide?"},
+    {"_id": "10", "title": "", "text": "Which fish would survive in salt water?"},
+]
+
 data_ar = [
     {"_id": "1", "title": "", "text": "الأرض جميلة والسماء زرقاء","metadata": {}},
     {"_id": "2", "title": "", "text": "الليل ونجومه وسماه وقمره","metadata": {}},

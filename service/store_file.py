@@ -13,6 +13,7 @@ path_stemming=path_dir_out_preprocessing+"stemming.txt"
 path_lemmatize=path_dir_out_preprocessing+"lemmatize.txt"
 path_stopwords=path_dir_out_preprocessing+"stopwords.txt"
 path_duplicated=path_dir_out_preprocessing+"duplicated.txt"
+path_cluster=path_dir_out_preprocessing+"cluster.txt"
 
 #out_representation
 path_inverted_index=path_dir_out_representation+"inverted_index.txt"
@@ -63,9 +64,21 @@ def creat_file_from_map(file_path,map):
         for key, value in map.items():
             text = f"{key}:{value}, \n"
             file.writelines(text)
+def creat_file_from_list(file_path,list):
+    with open(file_path,'w',1024,"utf-8") as file:
+        for value in list:
+            text = f"{value} \n\n"
+            file.writelines(text)
 
 
 
+
+
+def convert_list_to_text(list):
+    text = ""
+    for item in list:
+        text+=f"{item}, \n"
+    return text
 
 def convert_map_to_text(map):
     text = ""
