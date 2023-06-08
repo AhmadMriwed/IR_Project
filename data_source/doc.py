@@ -66,7 +66,12 @@ data_ar = [
     {"_id": "1", "title": "", "text": "الأرض جميلة والسماء زرقاء","metadata": {}},
     {"_id": "2", "title": "", "text": "الليل ونجومه وسماه وقمره","metadata": {}},
     {"_id": "3", "title": "", "text": "هذه الجملة صعبة التجذير والتأصيل سوف تعطيك أكبر قدر من الجهد، ستضعف قريباً أليس كذلك؟","metadata": {}},
-    {"_id": "4", "title": "", "text": "صلى الله على محمد، صلى الله عليه وسلم","metadata": {}}
+    {"_id": "4", "title": "", "text": "صلى الله على محمد، صلى الله عليه وسلم","metadata": {}},
+    {"_id": "5", "title": "", "text": "صلى الله على محمد، صلى الله عليه وسلم1","metadata": {}},
+    {"_id": "6", "title": "", "text": "صلى الله على محمد، صلى الله عليه وسلم2","metadata": {}},
+    {"_id": "7", "title": "", "text": "صلى الله على محمد، صلى الله عليه وسلم3","metadata": {}},
+    {"_id": "8", "title": "", "text": "صلى الله على محمد، صلى الله عليه وسلم4","metadata": {}},
+    {"_id": "9", "title": "", "text": "صلى الله على محمد، صلى الله عليه وسلم5","metadata": {}},
 ]
 def read_data(corpus,language_code=configoration.language_code):
     if language_code is configoration.language_code_ar:
@@ -77,8 +82,9 @@ def read_data(corpus,language_code=configoration.language_code):
 # def read_data():
 #     return data
 
-corpus={}
+
 def convert_data_to_corpous(data):
+    corpus = {}
     for doc in data:
         corpus[doc['_id']]=doc['text']
     return corpus    

@@ -50,7 +50,7 @@ def prmr2(queries):
     rank_docs={}
     i=0
     for key in queries.keys():
-       if(i<100):
+       if(i<10):
             i+=1
             query_processing = qp.query_processing({key: queries[key]})
             query_representation = qrp.query_representation({key: query_processing[key]})
@@ -62,7 +62,7 @@ def prmr2(queries):
                                       query_matching['query'][qm.unique_words_key], [key])
             del query_matching,query_representation
             gc.collect()
-            if(i/100 ==0):
+            if(i%50 ==1):
                 print("Done "+f"{i}")
     store_file.creat_file_from_map(store_file.path_query_rank,rank_docs)
     print("Done queries rank")

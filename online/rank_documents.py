@@ -29,7 +29,8 @@ def rank(query_vector,docs_vector,target_documents, target_words,target_queries=
 
 def rank_documents_list(query_vector, document_vectors):
     from sklearn.metrics.pairwise import cosine_similarity
-
+    if(len(query_vector)==0 or len(document_vectors)==0):
+        return []
     similarity_scores = cosine_similarity(query_vector, document_vectors)
     sorted_indices = np.argsort(similarity_scores)
     ranked_documents = sorted_indices.squeeze().tolist()
