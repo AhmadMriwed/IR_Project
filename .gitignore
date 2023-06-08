@@ -15,3 +15,10 @@
 /out/out_preprocessing/lemmatize.txt
 /out/out_preprocessing/duplicated.txt
 /out/out_preprocessing/cluster.txt
+/out/query_processing/duplicated.txt
+/out/query_processing/tokenize.txt
+/out/query_processing/stopwords.txt
+/out/query_processing/stemming.txt
+/out/query_processing/query.txt
+/out/query_processing/punctuation.txt
+/out/query_processing/lemmatize.txt
