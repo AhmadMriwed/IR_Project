@@ -9,7 +9,7 @@ corpus={}
 corpus_ar={}
 queries={}
 qrels={}
-print(len( list(dataset.qrels_iter())))
+#print(len( list(dataset.qrels_iter())))
 # print(len( list(dataset1.docs_iter())))
 def read_qrels(doc_ids,):
     #qrels={}
@@ -28,7 +28,6 @@ def read_dataset_ar():
     # with open('../data_set/topic.dev.tsv', 'r', encoding='utf-8') as file:
     #     lines = file.readlines()
 
-
     with open('../data_set/wiki_ar.documents', 'r', encoding='utf-8') as file:
         lines = file.readlines()
     i=0
@@ -42,7 +41,7 @@ def read_dataset_ar():
             doc_text = parts[1]
             corpus_ar[doc_id]= doc_text
 
-    print(f"data_set ar : {len(corpus_ar)}")
+    #print(f"data_set ar : {len(corpus_ar)}")
     return corpus_ar
 
 def read_dataset():
@@ -55,7 +54,7 @@ def read_dataset():
         corpus[doc.doc_id]=doc.text
         #fetch limit from dataset
         #if(int(doc.doc_id)>110000):
-        if(int(doc.doc_id)>60000):
+        if(int(doc.doc_id)>100000):
         #if(int(doc.doc_id)>60):
             break
     for query in dataset.queries_iter():
