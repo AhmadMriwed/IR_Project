@@ -1,0 +1,5 @@
+           	  10	  11	1990	2021	2022	  21	  45	citi	diamond	good	guid	india	invest	 koh	kohinoor	market	noor	play	share	step	stori	 usa	word
+1          	0   	0   	0   	0   	0   	0   	0   	0   	   0   	0   	1   	 1   	  1   	0   	    0   	  1   	0   	0   	 1   	2   	 0   	0   	0   
+22222222222	0   	0   	0   	0   	0   	0   	0   	0   	   0   	0   	1   	 0   	  1   	0   	    0   	  1   	0   	0   	 1   	2   	 0   	0   	0   
+3          	0   	0   	1   	0   	0   	0   	0   	1   	   1   	0   	0   	 0   	  0   	1   	    1   	  0   	1   	0   	 0   	0   	 1   	1   	0   
+4          	1   	2   	0   	1   	1   	1   	1   	0   	   0   	2   	0   	 0   	  0   	0   	    0   	  0   	0   	2   	 0   	0   	 0   	0   	1   
