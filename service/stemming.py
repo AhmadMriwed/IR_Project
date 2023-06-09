@@ -9,7 +9,7 @@ stemmer_ar= ISRIStemmer()
 #stemming_corpus = {}
 
 def stemming(corpus,language_code=configoration.language_code):
-    if configoration.language_code is configoration.language_code_ar:
+    if language_code is configoration.language_code_ar:
         return stemming_en(corpus)
     else:
         return stemming_en(corpus)

@@ -1,5 +1,4 @@
-
-
+from configoration import configoration
 from service import tokenize
 from service import stemming
 from service import lemmatize
@@ -20,31 +19,31 @@ corpus ={"query":"Did Ben Affleck shine more than Christian Bale as Batman??"}
 store_file.creat_file_from_map(store_file.path_query,corpus)
 
 # clean query
-def clean_query(corpus):
+def clean_query(corpus,language_code):
     # print("=============================================")
     # print("==                Clean Query              ==")
     # print("=============================================")
     # tokenize
-    tokenized_corpus = tokenize.tokenize(corpus)
+    tokenized_corpus = tokenize.tokenize(corpus,language_code=language_code)
     # print("Done tokenize")
     store_file.creat_file_from_map(store_file.path_tokenize_q,tokenized_corpus)
     # punctuation
-    punctuation_corpus = punctuation.remove_punctuation(tokenized_corpus)
+    punctuation_corpus = punctuation.remove_punctuation(tokenized_corpus,language_code=language_code)
     #print(punctuation_corpus)
     # print("Done remove punctuation")
     store_file.creat_file_from_map(store_file.path_punctuation_q,punctuation_corpus)
     # stemming
-    stemming_corpus=stemming.stemming(punctuation_corpus)
+    stemming_corpus=stemming.stemming(punctuation_corpus,language_code=language_code)
     #print(stemming_corpus)
     # print("Done stemming")
     store_file.creat_file_from_map(store_file.path_stemming_q,stemming_corpus)
     # lemmatize
-    lemmatize_corpus = lemmatize.lemmatize(stemming_corpus)
+    lemmatize_corpus = lemmatize.lemmatize(stemming_corpus,language_code=language_code)
     #print(lemmatize_corpus)
     # print("Done lemmatize")
     store_file.creat_file_from_map(store_file.path_lemmatize_q,lemmatize_corpus)
     # stopwords
-    stopwords_corpus = stop_words.remove_stopwords(lemmatize_corpus)
+    stopwords_corpus = stop_words.remove_stopwords(lemmatize_corpus,language_code=language_code)
     #print(stopwords_corpus)
     # print("Done remove stopwords")
     store_file.creat_file_from_map(store_file.path_stopwords_q, stopwords_corpus)
@@ -59,8 +58,8 @@ def clean_query(corpus):
 
 
 # query preprocessing
-def query_processing(corpus=corpus):
-    return  clean_query(corpus)
+def query_processing(corpus=corpus,language_code=configoration.language_code_en):
+    return  clean_query(corpus,language_code)
 
 
 

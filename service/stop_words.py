@@ -8,7 +8,7 @@ stopwords_list_ar += set(stopwords.words('arabic'))
 
 
 def remove_stopwords(corpus,language_code=configoration.language_code):
-    if configoration.language_code is configoration.language_code_ar:
+    if language_code is configoration.language_code_ar:
         return remove_stopwords_ar(corpus)
     else:
         return remove_stopwords_en(corpus)

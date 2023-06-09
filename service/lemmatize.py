@@ -7,7 +7,7 @@ from configoration import configoration
 lemmatizer = WordNetLemmatizer()
 
 def lemmatize(corpus,language_code=configoration.language_code):
-    if configoration.language_code is configoration.language_code_ar:
+    if language_code is configoration.language_code_ar:
         return lemmatize_ar(corpus)
     else:
         return lemmatize_en(corpus)

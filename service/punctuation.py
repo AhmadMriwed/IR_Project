@@ -8,7 +8,7 @@ punctuation_list=' '.join(string.punctuation).split()
 
 #punctuation_corpus = {}
 def remove_punctuation(corpus,language_code=configoration.language_code):
-    if configoration.language_code is configoration.language_code_ar:
+    if language_code is configoration.language_code_ar:
         return remove_punctuation_ar(corpus)
     else:
         return remove_punctuation_en(corpus)

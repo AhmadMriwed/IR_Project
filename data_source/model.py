@@ -10,13 +10,13 @@ from cluster import search_cluster as sc
 
 
 corpus = docs.read_dataset()
-#corpus_ar = docs.read_dataset()
+corpus_ar = docs.read_dataset_ar()
 #configoration.change_language(configoration.language_code_ar)
 #configoration.cluster_exc=True
 
-corpus_ar = doc.convert_data_to_corpous(doc.data_ar)
+#corpus_ar = doc.convert_data_to_corpous(doc.data_ar)
 #corpus = doc.convert_data_to_corpous(doc.data)
-print("count docs : " +f"{len(corpus)}")
+#print("count docs : " +f"{len(corpus)}")
 print(store_file.convert_map_to_text_limit(corpus,10))
 
 query ={"query":"what is step by india"}
@@ -40,7 +40,7 @@ def offline(corpus,language_code):
     global data_representation_ar
     global tfidf_df_en
     global tfidf_df_ar
-    data_preprocessing = dpp.data_preprocessing(corpus)
+    data_preprocessing = dpp.data_preprocessing(corpus,language_code)
     # app cluster
     ca.cluster_app(corpus)
     data_representation=drp.data_representation(data_preprocessing)
@@ -56,12 +56,14 @@ def offline(corpus,language_code):
     #del data_preprocessing
     #gc.collect()
 
-def online(query=query):
+def online(query=query,language_code=configoration.language_code_en):
     global query_processing
     global query_representation
     global query_matching
     global rank_docs
-    query_processing=qp.query_processing(corpus=query)
+    query_processing=qp.query_processing(corpus=query,language_code=language_code)
+    if not any(query_processing.values()):
+        return []
     query_representation=qrp.query_representation(query_processing)
     data_inverted_index=sc.search_cluster_by_s(
         configoration.get_by_language(data_representation_en,data_representation_ar),
